@@ -1,0 +1,341 @@
+.login-wrapper {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+/* ── Card ── */
+.login-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Hero Banner ── */
+.login-hero {
+  position: relative;
+  min-height: 260px;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.6) 100%),
+    url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px 28px 32px;
+}
+
+.hero-badge {
+  position: absolute;
+  top: 20px;
+  left: 28px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-badge-text {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+}
+
+.hero-badge-text span {
+  color: #52b788;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.hero-subtitle {
+  color: rgba(255,255,255,0.75);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.btn-get-started {
+  background: var(--orange);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 14px 32px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(232,93,4,0.4);
+}
+
+.btn-get-started:hover {
+  background: var(--orange-dark);
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px rgba(232,93,4,0.5);
+}
+
+/* ── Logo Header (for sign-in panel) ── */
+.login-logo-header {
+  background: var(--orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0 28px;
+}
+
+.logo-svg {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logo-text {
+  color: white;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.logo-dot {
+  width: 22px;
+  height: 22px;
+  background: var(--green-accent);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+
+.logo-dot-reg {
+  width: 22px;
+  height: 22px;
+  background: #3a86ff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+
+/* ── Form Body ── */
+.login-body {
+  padding: 28px 28px 24px;
+}
+
+.error-banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+/* ── Form Fields ── */
+.field-group {
+  margin-bottom: 16px;
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+
+.field-wrap {
+  position: relative;
+}
+
+.field-input {
+  width: 100%;
+  background: var(--gray-50);
+  border: 1.5px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  padding: 13px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: var(--gray-700);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.field-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(232,93,4,0.08);
+}
+
+.field-input.has-icon {
+  padding-right: 44px;
+}
+
+.field-icon-btn {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.field-icon-btn:hover { color: var(--gray-600); }
+
+/* ── Forgot / Links ── */
+.forgot-row {
+  text-align: right;
+  margin-bottom: 18px;
+  margin-top: -8px;
+}
+
+.link-orange {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+
+.link-orange:hover { text-decoration: underline; }
+
+/* ── Checkbox Row ── */
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.check-row input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: var(--orange);
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.check-label {
+  font-size: 12px;
+  color: var(--gray-400);
+  line-height: 1.5;
+}
+
+/* ── Submit Button ── */
+.btn-submit {
+  background: var(--orange);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(232,93,4,0.35);
+  margin-bottom: 22px;
+}
+
+.btn-submit:hover {
+  background: var(--orange-dark);
+  transform: scale(1.01);
+  box-shadow: 0 6px 24px rgba(232,93,4,0.45);
+}
+
+.btn-submit:active { transform: scale(0.98); }
+
+/* ── Social Sign In ── */
+.social-label {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-bottom: 14px;
+}
+
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gray-200);
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.social-btn:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* ── Bottom link ── */
+.bottom-text {
+  text-align: center;
+  font-size: 13px;
+  color: var(--gray-400);
+}
+
+/* ── Tab Switcher (welcome screen) ── */
+.screen-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--gray-200);
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--gray-500);
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+}
